@@ -32,8 +32,16 @@ Agent skills collection - 技能生态通用。
 | `github` | [gh CLI](https://cli.github.com/) | 使用 `gh` CLI 与 GitHub 交互，处理 PR、CI、Issues 等。使用场景：Cli 自动pr、merged合并 。 | [skillhub.cn](https://skillhub.cn/skills/github) / [skills.sh](https://skills.sh/github/awesome-copilot/gh-cli) / [clawhub.ai](https://clawhub.ai/steipete/github) / [GitHub](https://github.com/github/awesome-copilot/tree/main/skills/gh-cli) |
 | `bilibili-cli` | [bilibili-cli (PyPI)](https://pypi.org/project/bilibili-cli/) | B站CLI工具：视频详情、字幕、搜索、热门、评论、互动等。使用场景：抓取评论、生成AI视频摘要。 | [skills.sh](https://skills.sh/jackwener/bilibili-cli/bilibili-cli) / [GitHub](https://github.com/public-clis/bilibili-cli) / [ModelScope](https://www.modelscope.cn/skills/@hwj123hwj/bilibili-cli) |
 | `bilibili-analyzer` | [FFmpeg](https://ffmpeg.org/download.html) | B站视频深度分析：下载视频拆帧、AI分析生成专题文档或实操教程；使用场景：生成图文并茂文档。 | [skills.sh](https://skills.sh/aidotnet/moyucode/bilibili-analyzer) / [ModelScope](https://www.modelscope.cn/skills/@aidotnet/bilibili-analyzer) / [GitHub](https://github.com/AIDotNet/MoYuCode/blob/main/skills/tools/bilibili-analyzer/SKILL.md) |
+| `claude-vision-skill` | [Node.js](https://nodejs.org/)、阿里云百炼 [API Key](https://bailian.console.aliyun.com/) | 让 DeepSeek 等无 vision 能力的模型获得识图能力：读取图片 → base64 → 发给 vision 模型 API → 返回文字描述。支持本地图片和 URL。**全局安装**，任何项目可通过绝对路径调用。推荐千问 `qwen3.5-omni-plus`（新用户 100 万 token 免费）。 | [GitHub](https://github.com/asuojun/claude-vision-skill) |
 
 调用方式：`/github`、`/bilibili-cli`、`/bilibili-analyzer`
+
+> **claude-vision-skill 全局安装路径**: `~/claude-vision-skill/vision.js`。跨项目调用方式：
+> ```bash
+> node ~/claude-vision-skill/vision.js "<图片路径>" "用中文描述这张图片"
+> node ~/claude-vision-skill/vision.js --url "<图片URL>" "描述这张图"
+> ```
+> 使用前需配置 `~/.claude-vision-skill/.env` 中的 `DASHSCOPE_API_KEY` 和 `VISION_MODEL`。
 
 ---
 
